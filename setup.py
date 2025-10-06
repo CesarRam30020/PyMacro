@@ -18,8 +18,16 @@ setup(
     "": ["*.ins"],  # incluye archivos .ins en cualquier subcarpeta
   },
   install_requires=[
-    "pyautogui>=0.9.54",
-    "pynput>=1.7.6",
+    "MouseInfo>=0.1.3 ",
+    "pip>=4.3.1",
+    "PyAutoGUI>=0.9.54",
+    "PyGetWindow>=0.0.9 ",
+    "PyMsgBox>=2.0.1 ",
+    "pyperclip>=1.11.0",
+    "PyRect>=0.2.0 ",
+    "PyScreeze>=1.0.1 ",
+    "pytweening>=1.2.0 ",
+    "tk>=0.1.0"
     # agrega dependencias si usas tkinter, customtkinter, etc.
   ],
   python_requires=">=3.9",

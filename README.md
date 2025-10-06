@@ -33,4 +33,14 @@ Explica qué hace tu proyecto, el contexto o motivación detrás de él y los ob
 ---
 
 ## 📂 Estructura del Proyecto
-
+PyMacro/
+├── scripts/
+│   └── scripts.py
+├── ButtonsFrame.py
+├── InstApp.py
+├── InstructionsFrame.py
+├── main.py
+├── README.md
+├── setup.py
+├── requirements.txt
+└── .gitignore
