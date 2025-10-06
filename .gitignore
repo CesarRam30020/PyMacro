@@ -55,6 +55,8 @@ coverage.xml
 *.bak
 *.tmp
 
+instructions/*.ins
+
 venv/
 env/
 ENV/
