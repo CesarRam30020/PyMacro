@@ -21,6 +21,3 @@ class InstApp:
     buttonsFrame.grid(row=1, column=0)
 
     self.root.mainloop()
-
-if __name__ == "__main__":
-  InstApp()
