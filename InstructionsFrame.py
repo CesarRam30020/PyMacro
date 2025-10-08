@@ -18,7 +18,6 @@ class InstructionsFrame(Frame):
         text = file,
         variable = self.instructionsSet,
         value = file,
-        command = lambda f = file: print(f"File: {f}"),
       )
       rb.grid(row=i, column=0, sticky="w")
 

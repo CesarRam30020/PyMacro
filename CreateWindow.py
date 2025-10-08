@@ -5,10 +5,10 @@ class CreateWindow(Toplevel):
     super().__init__()
     self.title(title)
 
-    # self.wm_attributes("-alpha", 0.7)
-    # self.wm_attributes("-fullscreen", True)
+    self.wm_attributes("-alpha", 0.7)
+    self.wm_attributes("-fullscreen", True)
 
-  #   self.bind("<Button>", self.on_click)
+    self.bind("<Button>", self.on_click)
 
-  # def on_click(self, event):
-  #   print(f"({event.x}, {event.y})")
+  def on_click(self, event):
+    print(f"click: {event.x}, {event.y}")

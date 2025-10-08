@@ -5,7 +5,6 @@ class ButtonsFrame(Frame):
     super().__init__(root)
 
     for i, button in enumerate(buttons):
-      print(f"I: {i}")
       btn = Button(
         self,
         text=button["text"],

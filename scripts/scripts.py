@@ -1,5 +1,7 @@
-from os import listdir, makedirs
-from pyautogui import moveTo, move, click, write, press
+from os import listdir, makedirs, system
+from pyautogui import moveTo, click, write
+from time import sleep
+import re
 
 BASE_PATH = "instructions/"
 
@@ -20,17 +22,22 @@ def runInstructions(file: str):
   if file == "None":
     raise ValueError("No instruction file provided")
 
-  
   with open(f"{BASE_PATH}{file}", "r") as file:
     instructions = file.readlines()
 
     for instruction in instructions:
-      match instruction.split(":"):
-        case ["move", params]:
-          move(*map(int, params.split(",")))
+      if re.match("(^#.*$|^$)", instruction):
+        continue
 
-        case ["moveTo", params]:
-          moveTo(*map(int, params.split(",")))
+      match instruction.split("="):
+        case ["start", params]:
+          system(f"start {params.strip()}")
+
+        case ["shutdown", params]:
+          system(f"shutdown {params.strip()}")
+
+        case ["await", params]:
+          sleep(float(params))
 
         case ["click", params]:
           click(*map(int, params.split(",")))
@@ -38,11 +45,11 @@ def runInstructions(file: str):
         case ["write", params]:
           write(params.strip())
 
-        case ["press", params]:
-          press(params.strip())
+        case ["moveTo", params]:
+          moveTo(*map(int, params.split(",")))
 
         case _:
-          print("Unknown instruction")
+          print(f"Unknown instruction {instruction}")
 
   return True
 
