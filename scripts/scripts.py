@@ -1,9 +1,10 @@
-from os import listdir
+from os import listdir, makedirs
 from pyautogui import moveTo, move, click, write, press
 
 BASE_PATH = "instructions/"
 
 def getInstructionFiles():
+  makedirs(BASE_PATH, exist_ok = True)
   return [_ for _ in listdir(BASE_PATH) if _[-4:] == ".ins"]
 
 def deleteInstructionFile(file):
@@ -44,3 +45,6 @@ def runInstructions(file: str):
           print("Unknown instruction")
 
   return True
+
+def write_actions(event):
+  print(event)
