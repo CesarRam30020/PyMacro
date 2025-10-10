@@ -1,12 +1,9 @@
 # 🐍 PyMacro
 
-PyMacro es una herramienta diseñada para simplificar y automatizar la creación
-de macros en Python. Su objetivo es reducir el tiempo y esfuerzo necesarios para
-realizar acciones repetitivas en el trabajo.
+PyMacro is a tool designed for simplification and automatization of boring tasks
 
 # Virtual Environment
-
-Comando para crear un venv en python
+How to create a virtual environment in python
 
 >[!TIP]
 >```bash
@@ -14,8 +11,7 @@ Comando para crear un venv en python
 >```
 
 # PyCompiler
-
-Comandos basicos para compilar la aplicación
+How to compile a python application
 
 >[!TIP]
 >```bash
