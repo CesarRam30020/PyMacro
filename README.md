@@ -9,5 +9,5 @@ realizar acciones repetitivas en el trabajo.
 
 Comandos basicos para compilar la aplicación
 
->[!WARNING]
+>[!TIP]
 > pyinstaller [--windowed] [--onefile] main.py
