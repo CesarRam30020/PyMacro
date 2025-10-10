@@ -27,7 +27,9 @@ setup(
     "PyRect>=0.2.0 ",
     "PyScreeze>=1.0.1 ",
     "pytweening>=1.2.0 ",
-    "tk>=0.1.0"
+    "tk>=0.1.0",
+    "pyinstaller>=6.16.0",
+    "pyinstaller-hooks-contrib>=2025.9",
     # agrega dependencias si usas tkinter, customtkinter, etc.
   ],
   python_requires=">=3.9",
