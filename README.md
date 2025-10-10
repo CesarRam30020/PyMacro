@@ -11,5 +11,5 @@ Comandos basicos para compilar la aplicación
 
 >[!TIP]
 >```bash
-> pyinstaller [--windowed] [--onefile] main.py
+> pyinstaller --windowed --onefile main.py
 >```
