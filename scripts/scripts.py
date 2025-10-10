@@ -52,6 +52,3 @@ def runInstructions(file: str):
           print(f"Unknown instruction {instruction}")
 
   return True
-
-def write_actions(event):
-  print(event)
