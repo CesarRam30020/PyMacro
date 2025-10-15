@@ -54,7 +54,7 @@ def runInstructions(file: str):
   return True
 
 def saveInstructions(file: str, text: str):
-  print(file.find(".ins"))
+  makedirs(BASE_PATH, exist_ok = True)
   file = file if file.find(".ins") != -1 else f"{file}.ins"
 
   with open(f"{BASE_PATH}{file}", "w+") as f:
