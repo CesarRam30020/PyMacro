@@ -7,25 +7,23 @@ from scripts.scripts import runInstructions
 class InstApp:
   def __init__(self):
     self.root = Tk()
-    self.root.title("Instructions Runner")
+    self.root.title("PyMacro")
     self.child_window = None
 
-    instructionsFrame = InstructionsFrame(self.root)
-    instructionsFrame.grid(row=0, column=0)
+    self.instructionsFrame = InstructionsFrame(self.root)
+    self.instructionsFrame.grid(row=0, column=0)
 
     buttonsFrame = ButtonsFrame(
       self.root,
-      # instructionsSet = instructionsFrame.instructionsSet,
-      # on_create = self.handle_on_create,
       buttons=[
         {
-          "text": "RUN",
+          "text": "Correr",
           "command": lambda: self.runInstructions(
-            instructionsFrame.instructionsSet.get()
+            self.instructionsFrame.instructionsSet.get()
           )
         },
         {
-          "text": "CREATE",
+          "text": "Crear",
           "command": self.handle_on_create
         }
       ]
@@ -35,8 +33,13 @@ class InstApp:
     self.root.mainloop()
 
   def handle_on_create(self):
-    self.child_window = CreateWindow("Create New Ins File")
+    self.child_window = CreateWindow("Crear Nuevo .Ins")
+    self.child_window.protocol("WM_DELETE_WINDOW", self.onWindowClosed)
   
+  def onWindowClosed(self):
+    self.child_window.destroy()
+    self.instructionsFrame.reBuild()
+
   def runInstructions(self, file):
     try:
       runInstructions(file)

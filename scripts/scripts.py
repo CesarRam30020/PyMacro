@@ -52,3 +52,10 @@ def runInstructions(file: str):
           print(f"Unknown instruction {instruction}")
 
   return True
+
+def saveInstructions(file: str, text: str):
+  print(file.find(".ins"))
+  file = file if file.find(".ins") != -1 else f"{file}.ins"
+
+  with open(f"{BASE_PATH}{file}", "w+") as f:
+    f.write(text)
